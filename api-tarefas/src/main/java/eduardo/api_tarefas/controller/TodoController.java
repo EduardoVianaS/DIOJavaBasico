@@ -2,6 +2,7 @@ package eduardo.api_tarefas.controller;
 
 import eduardo.api_tarefas.entity.Todo;
 import eduardo.api_tarefas.service.TodoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,7 +10,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-private TodoService todoService;
+    @Autowired
+    private TodoService todoService;
 
     public TodoService getTodoService() {
         return todoService;
